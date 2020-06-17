@@ -2,6 +2,17 @@
 
 namespace Jundayw\NotificationUmeng;
 
+use Jundayw\NotificationUmeng\Android\AndroidBroadcast;
+use Jundayw\NotificationUmeng\Android\AndroidCustomizedcast;
+use Jundayw\NotificationUmeng\Android\AndroidFilecast;
+use Jundayw\NotificationUmeng\Android\AndroidGroupcast;
+use Jundayw\NotificationUmeng\Android\AndroidUnicast;
+use Jundayw\NotificationUmeng\IOS\IOSBroadcast;
+use Jundayw\NotificationUmeng\IOS\IOSCustomizedcast;
+use Jundayw\NotificationUmeng\IOS\IOSFilecast;
+use Jundayw\NotificationUmeng\IOS\IOSGroupcast;
+use Jundayw\NotificationUmeng\IOS\IOSUnicast;
+
 class Demo
 {
     protected $appkey           = null;
@@ -35,7 +46,7 @@ class Demo
             print("Sending broadcast notification, please wait...\r\n");
             $brocast->send();
             print("Sent SUCCESS\r\n");
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             print("Caught exception: " . $e->getMessage());
         }
     }
@@ -61,7 +72,7 @@ class Demo
             print("Sending unicast notification, please wait...\r\n");
             $unicast->send();
             print("Sent SUCCESS\r\n");
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             print("Caught exception: " . $e->getMessage());
         }
     }
@@ -83,7 +94,7 @@ class Demo
             print("Sending filecast notification, please wait...\r\n");
             $filecast->send();
             print("Sent SUCCESS\r\n");
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             print("Caught exception: " . $e->getMessage());
         }
     }
@@ -131,7 +142,7 @@ class Demo
             print("Sending groupcast notification, please wait...\r\n");
             $groupcast->send();
             print("Sent SUCCESS\r\n");
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             print("Caught exception: " . $e->getMessage());
         }
     }
@@ -156,7 +167,7 @@ class Demo
             print("Sending customizedcast notification, please wait...\r\n");
             $customizedcast->send();
             print("Sent SUCCESS\r\n");
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             print("Caught exception: " . $e->getMessage());
         }
     }
@@ -180,7 +191,7 @@ class Demo
             print("Sending customizedcast notification, please wait...\r\n");
             $customizedcast->send();
             print("Sent SUCCESS\r\n");
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             print("Caught exception: " . $e->getMessage());
         }
     }
@@ -203,7 +214,7 @@ class Demo
             print("Sending broadcast notification, please wait...\r\n");
             $brocast->send();
             print("Sent SUCCESS\r\n");
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             print("Caught exception: " . $e->getMessage());
         }
     }
@@ -227,7 +238,7 @@ class Demo
             print("Sending unicast notification, please wait...\r\n");
             $unicast->send();
             print("Sent SUCCESS\r\n");
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             print("Caught exception: " . $e->getMessage());
         }
     }
@@ -251,7 +262,7 @@ class Demo
             print("Sending filecast notification, please wait...\r\n");
             $filecast->send();
             print("Sent SUCCESS\r\n");
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             print("Caught exception: " . $e->getMessage());
         }
     }
@@ -293,7 +304,7 @@ class Demo
             print("Sending groupcast notification, please wait...\r\n");
             $groupcast->send();
             print("Sent SUCCESS\r\n");
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             print("Caught exception: " . $e->getMessage());
         }
     }
@@ -320,7 +331,7 @@ class Demo
             print("Sending customizedcast notification, please wait...\r\n");
             $customizedcast->send();
             print("Sent SUCCESS\r\n");
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             print("Caught exception: " . $e->getMessage());
         }
     }
