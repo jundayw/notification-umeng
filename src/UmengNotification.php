@@ -56,18 +56,18 @@ abstract class UmengNotification
         "max_send_num"
     ];
 
-    function __construct()
+    public function __construct()
     {
 
     }
 
-    function setAppMasterSecret($secret)
+    public function setAppMasterSecret($secret)
     {
         $this->appMasterSecret = $secret;
     }
 
     //return TRUE if it's complete, otherwise throw exception with details
-    function isComplete()
+    public function isComplete()
     {
         if (is_null($this->appMasterSecret)) {
             throw new \Exception("Please set your app master secret for generating the signature!");
@@ -91,7 +91,7 @@ abstract class UmengNotification
     abstract function setPredefinedKeyValue($key, $value);
 
     //send the notification to umeng, return response data if SUCCESS , otherwise throw Exception with details.
-    function send()
+    public function send()
     {
         //check the fields to make sure that they are not NULL
         $this->isComplete();

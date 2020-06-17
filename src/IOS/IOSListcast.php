@@ -6,7 +6,7 @@ use Jundayw\NotificationUmeng\IOSNotification;
 
 class IOSListcast extends IOSNotification
 {
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->data["type"]          = "listcast";

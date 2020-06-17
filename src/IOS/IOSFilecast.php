@@ -6,7 +6,7 @@ use Jundayw\NotificationUmeng\IOSNotification;
 
 class IOSFilecast extends IOSNotification
 {
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->data["type"]    = "filecast";
@@ -14,7 +14,7 @@ class IOSFilecast extends IOSNotification
     }
 
     //return file_id if SUCCESS, else throw Exception with details.
-    function uploadContents($content)
+    public function uploadContents($content)
     {
         if ($this->data["appkey"] == null) {
             throw new \Exception("appkey should not be NULL!");
@@ -63,7 +63,7 @@ class IOSFilecast extends IOSNotification
         }
     }
 
-    function getFileId()
+    public function getFileId()
     {
         if (array_key_exists("file_id", $this->data)) {
             return $this->data["file_id"];

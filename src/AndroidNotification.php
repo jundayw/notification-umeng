@@ -44,14 +44,14 @@ abstract class AndroidNotification extends UmengNotification
         "custom"
     ];
 
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->data["payload"] = $this->androidPayload;
     }
 
     // Set key/value for $data array, for the keys which can be set please see $DATA_KEYS, $PAYLOAD_KEYS, $BODY_KEYS, $POLICY_KEYS
-    function setPredefinedKeyValue($key, $value)
+    public function setPredefinedKeyValue($key, $value)
     {
         if (!is_string($key)) {
             throw new \Exception("key should be a string!");
@@ -87,7 +87,7 @@ abstract class AndroidNotification extends UmengNotification
     }
 
     // Set extra key/value for Android notification
-    function setExtraField($key, $value)
+    public function setExtraField($key, $value)
     {
         if (!is_string($key)) {
             throw new \Exception("key should be a string!");

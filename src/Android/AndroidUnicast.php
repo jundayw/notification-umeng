@@ -6,7 +6,7 @@ use Jundayw\NotificationUmeng\AndroidNotification;
 
 class AndroidUnicast extends AndroidNotification
 {
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->data["type"]          = "unicast";

@@ -6,14 +6,14 @@ use Jundayw\NotificationUmeng\IOSNotification;
 
 class IOSCustomizedcast extends IOSNotification
 {
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->data["type"]       = "customizedcast";
         $this->data["alias_type"] = null;
     }
 
-    function isComplete()
+    public function isComplete()
     {
         parent::isComplete();
         if (!array_key_exists("alias", $this->data) && !array_key_exists("file_id", $this->data)) {
@@ -22,7 +22,7 @@ class IOSCustomizedcast extends IOSNotification
     }
 
     // Upload file with device_tokens or alias to Umeng
-    function uploadContents($content)
+    public function uploadContents($content)
     {
         if ($this->data["appkey"] == null) {
             throw new \Exception("appkey should not be NULL!");
@@ -71,8 +71,7 @@ class IOSCustomizedcast extends IOSNotification
         }
     }
 
-
-    function getFileId()
+    public function getFileId()
     {
         if (array_key_exists("file_id", $this->data)) {
             return $this->data["file_id"];

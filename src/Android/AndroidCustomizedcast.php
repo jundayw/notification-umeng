@@ -6,14 +6,14 @@ use Jundayw\NotificationUmeng\AndroidNotification;
 
 class AndroidCustomizedcast extends AndroidNotification
 {
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->data["type"]       = "customizedcast";
         $this->data["alias_type"] = null;
     }
 
-    function isComplete()
+    public function isComplete()
     {
         parent::isComplete();
         if (!array_key_exists("alias", $this->data) && !array_key_exists("file_id", $this->data)) {
@@ -23,7 +23,7 @@ class AndroidCustomizedcast extends AndroidNotification
 
     // Upload file with device_tokens or alias to Umeng
     //return file_id if SUCCESS, else throw Exception with details.
-    function uploadContents($content)
+    public function uploadContents($content)
     {
         if ($this->data["appkey"] == null) {
             throw new \Exception("appkey should not be NULL!");
@@ -72,7 +72,7 @@ class AndroidCustomizedcast extends AndroidNotification
         }
     }
 
-    function getFileId()
+    public function getFileId()
     {
         if (array_key_exists("file_id", $this->data)) {
             return $this->data["file_id"];

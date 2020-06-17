@@ -20,14 +20,14 @@ class Demo
     protected $timestamp        = null;
     protected $validation_token = null;
 
-    function __construct($key, $secret)
+    public function __construct($key, $secret)
     {
         $this->appkey          = $key;
         $this->appMasterSecret = $secret;
         $this->timestamp       = strval(time());
     }
 
-    function sendAndroidBroadcast()
+    public function sendAndroidBroadcast()
     {
         try {
             $brocast = new AndroidBroadcast();
@@ -51,7 +51,7 @@ class Demo
         }
     }
 
-    function sendAndroidUnicast()
+    public function sendAndroidUnicast()
     {
         try {
             $unicast = new AndroidUnicast();
@@ -77,7 +77,7 @@ class Demo
         }
     }
 
-    function sendAndroidFilecast()
+    public function sendAndroidFilecast()
     {
         try {
             $filecast = new AndroidFilecast();
@@ -99,7 +99,7 @@ class Demo
         }
     }
 
-    function sendAndroidGroupcast()
+    public function sendAndroidGroupcast()
     {
         try {
             /*
@@ -147,7 +147,7 @@ class Demo
         }
     }
 
-    function sendAndroidCustomizedcast()
+    public function sendAndroidCustomizedcast()
     {
         try {
             $customizedcast = new AndroidCustomizedcast();
@@ -172,7 +172,7 @@ class Demo
         }
     }
 
-    function sendAndroidCustomizedcastFileId()
+    public function sendAndroidCustomizedcastFileId()
     {
         try {
             $customizedcast = new AndroidCustomizedcast();
@@ -196,7 +196,7 @@ class Demo
         }
     }
 
-    function sendIOSBroadcast()
+    public function sendIOSBroadcast()
     {
         try {
             $brocast = new IOSBroadcast();
@@ -219,7 +219,7 @@ class Demo
         }
     }
 
-    function sendIOSUnicast()
+    public function sendIOSUnicast()
     {
         try {
             $unicast = new IOSUnicast();
@@ -243,7 +243,7 @@ class Demo
         }
     }
 
-    function sendIOSFilecast()
+    public function sendIOSFilecast()
     {
         try {
             $filecast = new IOSFilecast();
@@ -267,7 +267,7 @@ class Demo
         }
     }
 
-    function sendIOSGroupcast()
+    public function sendIOSGroupcast()
     {
         try {
             /*
@@ -309,7 +309,7 @@ class Demo
         }
     }
 
-    function sendIOSCustomizedcast()
+    public function sendIOSCustomizedcast()
     {
         try {
             $customizedcast = new IOSCustomizedcast();
