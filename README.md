@@ -11,3 +11,21 @@ We write the code following the standard of PHP 5.0+, so PHP version under 5.0 s
 
 Notes:
 We build this project on Mac with Sublime Text 2, so sometimes it doesn't look beautiful when switching to other platforms such as Ubuntu. But it doesn't hurt much except the beauty. Forgive us for this, and we are sure to do better.
+
+```
+use Jundayw\NotificationUmeng\Example\Umeng;
+
+// Set your appkey and master secret here
+$demo = new Umeng("your appkey", "your app master secret");
+$demo->sendAndroidUnicast();
+$demo->sendAndroidBroadcast();
+$demo->sendAndroidFilecast();
+$demo->sendAndroidGroupcast();
+$demo->sendAndroidCustomizedcast();
+$demo->sendAndroidCustomizedcastFileId();
+$demo->sendIOSBroadcast();
+$demo->sendIOSUnicast();
+$demo->sendIOSFilecast();
+$demo->sendIOSGroupcast();
+$demo->sendIOSCustomizedcast();
+```

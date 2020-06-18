@@ -1,6 +1,6 @@
 <?php
 
-namespace Jundayw\NotificationUmeng;
+namespace Jundayw\NotificationUmeng\Example;
 
 use Jundayw\NotificationUmeng\Android\AndroidBroadcast;
 use Jundayw\NotificationUmeng\Android\AndroidCustomizedcast;
@@ -13,7 +13,7 @@ use Jundayw\NotificationUmeng\IOS\IOSFilecast;
 use Jundayw\NotificationUmeng\IOS\IOSGroupcast;
 use Jundayw\NotificationUmeng\IOS\IOSUnicast;
 
-class Demo
+class Umeng
 {
     protected $appkey           = null;
     protected $appMasterSecret  = null;
@@ -336,20 +336,3 @@ class Demo
         }
     }
 }
-
-// Set your appkey and master secret here
-$demo = new Demo("your appkey", "your app master secret");
-$demo->sendAndroidUnicast();
-/* these methods are all available, just fill in some fields and do the test
- * $demo->sendAndroidBroadcast();
- * $demo->sendAndroidFilecast();
- * $demo->sendAndroidGroupcast();
- * $demo->sendAndroidCustomizedcast();
- * $demo->sendAndroidCustomizedcastFileId();
- *
- * $demo->sendIOSBroadcast();
- * $demo->sendIOSUnicast();
- * $demo->sendIOSFilecast();
- * $demo->sendIOSGroupcast();
- * $demo->sendIOSCustomizedcast();
- */
