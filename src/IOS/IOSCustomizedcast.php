@@ -55,7 +55,6 @@ class IOSCustomizedcast extends IOSNotification
         $curlErrNo = curl_errno($ch);
         $curlErr   = curl_error($ch);
         curl_close($ch);
-        print($result . "\r\n");
         if ($httpCode == "0") {
             //time out
             throw new \Exception("Curl error number:" . $curlErrNo . " , Curl error details:" . $curlErr . "\r\n");
