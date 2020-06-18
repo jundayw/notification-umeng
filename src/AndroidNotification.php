@@ -35,6 +35,7 @@ abstract class AndroidNotification extends UmengNotification
         "icon",
         "largeIcon",
         "img",
+        "sound",
         "play_vibrate",
         "play_lights",
         "play_sound",
